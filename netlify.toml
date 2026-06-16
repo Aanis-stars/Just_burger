@@ -1,0 +1,13 @@
+[build]
+command = "cd justburger-site && npm install && npm run generate"
+publish = "justburger-site/dist"
+base = "justburger-site"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[context.production]
+command = "cd justburger-site && npm ci && npm run generate"
+publish = "justburger-site/dist"
