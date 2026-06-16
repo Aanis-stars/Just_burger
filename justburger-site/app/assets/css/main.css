@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-jb-gold to-jb-gold-dark text-black font-semibold 
+           px-6 py-2.5 sm:px-8 sm:py-3 rounded-sm 
+           hover:from-jb-gold-light hover:to-jb-gold transition-all duration-300 
+           border-2 border-jb-gold hover:border-jb-gold-light
+           text-sm sm:text-base;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-jb-gold text-jb-gold px-6 py-2.5 sm:px-8 sm:py-3 rounded-sm
+           hover:bg-jb-gold hover:text-black transition-all duration-300
+           text-sm sm:text-base;
+  }
+  
+  .nav-link {
+    @apply text-black hover:text-jb-green transition-colors duration-200 
+           relative after:content-[''] after:absolute after:bottom-0 
+           after:left-0 after:w-0 after:h-0.5 after:bg-jb-gold 
+           hover:after:w-full after:transition-all after:duration-300
+           text-sm sm:text-base;
+  }
+  
+  .social-icon {
+    @apply w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full 
+           bg-gradient-to-br from-jb-gold to-jb-gold-dark text-jb-green 
+           hover:from-jb-gold-light hover:to-jb-gold
+           transition-all duration-200;
+  }
+}
+
+/* Carousel animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-track {
+  animation: scroll 30s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}

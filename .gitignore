@@ -1,0 +1,11 @@
+﻿node_modules/
+.nuxt/
+dist/
+.output/
+.env
+.env.local
+.env.*.local
+.vscode/
+.idea/
+*.log
+.DS_Store

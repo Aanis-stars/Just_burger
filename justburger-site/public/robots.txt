@@ -1,0 +1,9 @@
+# JustBurger - Robots.txt
+User-Agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://justburger.fr/sitemap.xml
+
+# Disallow private areas
+Disallow: /api/
